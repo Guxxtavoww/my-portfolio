@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 
 export type HookResponse<T> = readonly [
   T,
@@ -12,7 +12,7 @@ export function usePersitedState<T>(
   storageKey: string
 ): HookResponse<T> {
   // Check if window object is defined (browser environment)
-  const isClient = typeof window === 'object';
+  const isClient = useMemo(() => typeof window === 'object', []);
 
   const [state, setState] = useState(() => {
     if (isClient) {
