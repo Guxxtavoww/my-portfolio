@@ -25,8 +25,9 @@ export const TranslationsContext =
 
 export function TranslationProvider({ children }: WithChildren) {
   const [isPending, startTransiton] = useTransition();
-  const [currentTranslationKey, setCurrentTranslationKey] =
-    usePersitedState<Langs>('pt-br', 'current-translation');
+  const [currentTranslationKey, setCurrentTranslationKey] = usePersitedState<
+    Maybe<Langs>
+  >(null, 'current-translation');
   const [currentTranslation, setCurrentTranslation] = useState<iTranslation>(
     {} as iTranslation
   );
@@ -44,7 +45,9 @@ export function TranslationProvider({ children }: WithChildren) {
 
   useEffect(() => {
     startTransiton(async () => {
-      const currentTranslation = await getTranslation(currentTranslationKey);
+      const currentTranslation = await getTranslation(
+        currentTranslationKey || 'pt-br'
+      );
 
       setCurrentTranslation(currentTranslation);
     });
