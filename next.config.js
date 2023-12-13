@@ -6,10 +6,11 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'images.unsplash.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'avatars.githubusercontent.com',
+      },
     ],
-  },
-  experimental: {
-    serverActions: true,
   },
   eslint: {
     ignoreDuringBuilds: true,

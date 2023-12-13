@@ -7,9 +7,10 @@ import { TranslationProvider } from '@/contexts/translation.context';
 import ActiveSectionContextProvider from '@/contexts/active-section.context';
 import ThemeSwitch from '@/components/tools/theme-switch';
 import Header from '@/components/layout/header';
+import Footer from '@/components/layout/footer';
+import LanguageSwitch from '@/components/tools/language-switch';
 
 import './globals.css';
-import Footer from '@/components/layout/footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -37,6 +38,7 @@ export default function RootLayout({ children }: WithChildren) {
               </main>
               <Footer />
               <ThemeSwitch />
+              <LanguageSwitch />
               <Toaster position="top-right" />
             </ActiveSectionContextProvider>
           </TranslationProvider>

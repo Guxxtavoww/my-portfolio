@@ -10,13 +10,13 @@ export function useSectionInView(sectionName: iLink['hash'], threshold = 0.75) {
   const { ref, inView } = useInView({
     threshold,
   });
-  const { handleSetActiveSection, timeOfLastClick } = useActiveSection();
+  const { handleSetActiveSection } = useActiveSection();
 
   useEffect(() => {
-    if (inView && Date.now() - timeOfLastClick > 1000) {
+    if (inView) {
       handleSetActiveSection(sectionName);
     }
-  }, [inView, handleSetActiveSection, timeOfLastClick, sectionName]);
+  }, [inView, handleSetActiveSection, sectionName]);
 
   return {
     ref,

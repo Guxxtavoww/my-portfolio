@@ -53,7 +53,7 @@ export const eng: iTranslation = {
       {
         type: 'span',
         className: 'underline',
-        content: 'React (Next.js)',
+        content: 'React (Next.js) & NestJS',
       },
     ],
   },

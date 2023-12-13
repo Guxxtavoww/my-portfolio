@@ -26,7 +26,7 @@ export const ptBr: iTranslation = {
       { type: 'text', content: ' de experiência. Eu gosto de construir ' },
       { type: 'span', className: 'italic', content: 'sites e aplicativos' },
       { type: 'text', content: '. Meu foco é ' },
-      { type: 'span', className: 'underline', content: 'React (Next.js)' },
+      { type: 'span', className: 'underline', content: 'React (Next.js) e NestJS' },
     ],
   },
   footer: {
