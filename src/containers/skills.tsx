@@ -35,21 +35,29 @@ export default function Skills() {
         {currentTranslation?.skillsData.sectionName}
       </SectionHeading>
       <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
-        {currentTranslation?.skillsData.skills.map((skill, index) => (
-          <motion.li
-            className="bg-white borderBlack rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80"
-            key={index}
-            variants={fadeInAnimationVariants}
-            initial="initial"
-            whileInView="animate"
-            viewport={{
-              once: true,
-            }}
-            custom={index}
-          >
-            {skill}
-          </motion.li>
-        ))}
+        {isLoadingTranslation
+          ? [0, 1, 2, 3, 4, 5].map((item) => (
+              <div
+                className="bg-gray-500 borderBlack rounded-xl transition-all w-12 h-6 dark:bg-white/10 dark:text-white/80 hover:bg-gray-300 cursor-pointer animate-pulse"
+                key={item}
+              />
+            ))
+          : currentTranslation?.skillsData.skills.map((skill, index) => (
+              <motion.li
+                className="bg-white borderBlack rounded-xl transition-all px-5 py-3 dark:bg-white/10 dark:text-white/80 hover:bg-gray-300 cursor-pointer"
+                key={index}
+                variants={fadeInAnimationVariants}
+                initial="initial"
+                whileInView="animate"
+                viewport={{
+                  once: true,
+                }}
+                custom={index}
+                onClick={() => navigator.clipboard.writeText(skill)}
+              >
+                {skill}
+              </motion.li>
+            ))}
       </ul>
     </section>
   );
