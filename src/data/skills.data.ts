@@ -22,4 +22,5 @@ export const skillsData = [
   'NestJS',
   'MySql',
   'Docker',
+  'React Native',
 ].sort();
