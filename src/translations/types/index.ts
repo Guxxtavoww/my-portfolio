@@ -26,6 +26,15 @@ export interface iProject {
   imageUrl: string;
 }
 
+export interface iIntroData {
+  contactText: string;
+  introContent: {
+    type: string;
+    className?: string;
+    content: string;
+  }[];
+}
+
 export interface iFooterData {
   copyRightText: string;
   aboutBoldText: string;
@@ -40,5 +49,6 @@ export interface iTranslation {
   experiences: iExperience[];
   projects: iProject[];
   skills: Skills;
+  intro: iIntroData;
   footer: iFooterData;
 }

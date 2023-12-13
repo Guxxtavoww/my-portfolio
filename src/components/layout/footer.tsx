@@ -1,16 +1,16 @@
 'use client';
 
 import React from 'react';
+import clsx from 'clsx';
 
 import { useTranslations } from '@/contexts/translation.context';
-import clsx from 'clsx';
 
 export default function Footer() {
   const { isLoadingTranslation, currentTranslation } = useTranslations();
 
   return (
     <footer
-      className={clsx('mb-10 px-4 text-center text-gray-500 dark:text-white', {
+      className={clsx('my-10 px-4 text-center text-gray-500 dark:text-white', {
         'flex items-center justify-center': isLoadingTranslation,
       })}
     >
@@ -19,7 +19,7 @@ export default function Footer() {
       ) : (
         <>
           <small className="mb-2 block text-xs">
-            &copy; 2030 Gustavo Augusto.{' '}
+            &copy; {new Date().getFullYear()} Gustavo Augusto.{' '}
             {currentTranslation?.footer.copyRightText}
           </small>
           <p className="text-xs">

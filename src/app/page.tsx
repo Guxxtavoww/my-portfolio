@@ -1,15 +1,15 @@
 'use client';
 
-import { useTranslations } from '@/contexts/translation.context';
+import Intro from '@/containers/intro';
+import About from '@/containers/about';
+import SectionDivider from '@/components/layout/section-divider';
 
 export default function Page() {
-  const { isLoadingTranslation, handleToggleTranslation } = useTranslations();
-
   return (
     <>
-      <button onClick={handleToggleTranslation} disabled={isLoadingTranslation}>
-        Trocar
-      </button>
+      <Intro />
+      <SectionDivider />
+      <About />
     </>
   );
 }

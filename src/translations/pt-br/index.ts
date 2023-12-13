@@ -11,6 +11,24 @@ export const ptBr: iTranslation = {
   links: getLinks('pt-br'),
   projects: getProjects('pt-br'),
   skills: skillsData,
+  intro: {
+    contactText: 'Converse Comigo',
+    introContent: [
+      { type: 'span', className: 'font-bold', content: 'Olá, eu sou Gustavo.' },
+      { type: 'text', content: ' Eu sou um ' },
+      {
+        type: 'span',
+        className: 'font-bold',
+        content: 'desenvolvedor full-stack',
+      },
+      { type: 'text', content: ' com ' },
+      { type: 'span', className: 'font-bold', content: '3 anos' },
+      { type: 'text', content: ' de experiência. Eu gosto de construir ' },
+      { type: 'span', className: 'italic', content: 'sites e aplicativos' },
+      { type: 'text', content: '. Meu foco é ' },
+      { type: 'span', className: 'underline', content: 'React (Next.js)' },
+    ],
+  },
   footer: {
     copyRightText: 'Todos os direitos reservados.',
     aboutBoldText: 'Sobre esse site:',
