@@ -1,50 +1,35 @@
+import { nextJsBlogBanner, wmsBanner } from '@/assets';
 import { iProject } from '@/translations/types';
 
 export const engProjects: iProject[] = [
   {
-    title: 'CorpComment',
-    description:
-      'I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.',
-    tags: ['React', 'Next.js', 'MongoDB', 'Tailwind', 'Prisma'],
-    imageUrl: '',
+    title: 'Next JS blog',
+    description: 'A Project made to study the NextJS framework.',
+    tags: ['React', 'Next.js', 'Postgress', 'Tailwind', 'Supabase', 'Zustand'],
+    imageUrl: nextJsBlogBanner,
   },
   {
-    title: 'rmtDev',
+    title: 'WMS',
     description:
-      'Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.',
-    tags: ['React', 'TypeScript', 'Next.js', 'Tailwind', 'Redux'],
-    imageUrl: '',
-  },
-  {
-    title: 'Word Analytics',
-    description:
-      'A public web app for quick analytics on text. It shows word count, character count and social media post limits.',
-    tags: ['React', 'Next.js', 'SQL', 'Tailwind'],
-    imageUrl: '',
+      'A destribution center managment tool, very challeging due to the volatile nature of the bussiness logis',
+    tags: ['React', 'TypeScript', 'Redux', 'Styled Components'],
+    imageUrl: wmsBanner,
   },
 ];
 
 export const ptBrProjects: iProject[] = [
   {
-    title: 'CorpComment',
-    description:
-      'I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.',
+    title: 'Next JS Blog',
+    description: 'Um projeto feito para estudar o framework do NextJS',
     tags: ['React', 'Next.js', 'MongoDB', 'Tailwind', 'Prisma'],
-    imageUrl: '',
+    imageUrl: nextJsBlogBanner,
   },
   {
-    title: 'rmtDev',
+    title: 'WMS',
     description:
-      'Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.',
-    tags: ['React', 'TypeScript', 'Next.js', 'Tailwind', 'Redux'],
-    imageUrl: '',
-  },
-  {
-    title: 'Word Analytics',
-    description:
-      'A public web app for quick analytics on text. It shows word count, character count and social media post limits.',
-    tags: ['React', 'Next.js', 'SQL', 'Tailwind'],
-    imageUrl: '',
+      'Ferramenta de gerenciamento de centros de distribuição (CD), extremamente desafiador, pela natureza volátil das regras de negócio',
+    tags: ['React', 'TypeScript', 'Redux', 'Styled Components'],
+    imageUrl: wmsBanner,
   },
 ];
 

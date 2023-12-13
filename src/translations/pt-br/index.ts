@@ -9,8 +9,14 @@ export const ptBr: iTranslation = {
   lang: 'pt-br',
   experiences: getExperiences('pt-br'),
   links: getLinks('pt-br'),
-  projects: getProjects('pt-br'),
-  skills: skillsData,
+  projects: {
+    sectionName: 'Projetos',
+    projects: getProjects('pt-br'),
+  },
+  skillsData: {
+    sectionName: 'Minhas Habilidades',
+    skills: skillsData,
+  },
   intro: {
     contactText: 'Converse Comigo',
     introContent: [

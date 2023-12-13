@@ -20,24 +20,18 @@ export default function About() {
       transition={{ delay: 0.175 }}
       id="about"
     >
-      <SectionHeading>
-        {isLoadingTranslation ? (
-          <div className="flex items-center justify-center w-full">
-            <div className="w-1/2 rounded-lg bg-gray-400 h-12 animate-pulse" />
-          </div>
-        ) : (
-          currentTranslation!.about.sectionHeading
-        )}
+      <SectionHeading isLoading={isLoadingTranslation}>
+        {currentTranslation?.about.sectionHeading}
       </SectionHeading>
       {isLoadingTranslation ? (
-        <div className="flex flex-col gap-3 items-start w-full">
-          <div className="h-10 w-full max-w-lg rounded-md animate-pulse bg-gray-500" />
-          <div className="h-10 w-full max-w-lg rounded-md animate-pulse bg-gray-500" />
-          <div className="h-10 w-full max-w-lg rounded-md animate-pulse bg-gray-500" />
+        <div className="flex flex-col gap-3 items-start w-full animate-pulse">
+          <div className="h-5 w-full max-w-lg rounded-md bg-gray-500" />
+          <div className="h-5 w-full max-w-lg rounded-md bg-gray-500" />
+          <div className="h-5 w-full max-w-lg rounded-md bg-gray-500" />
         </div>
       ) : (
         <>
-          <p className="mb-3">
+          <p className="mb-2">
             {currentTranslation?.about.paragraph1}{' '}
             <span className="font-bold">
               {currentTranslation?.about.highlight1}
@@ -59,7 +53,7 @@ export default function About() {
               {currentTranslation?.about.highlight5}.
             </span>
           </p>
-          <p className="mb-3">
+          <p className="mb-2">
             {currentTranslation?.about.paragraph2}{' '}
             <span className="font-bold">
               {currentTranslation?.about.highlight6}

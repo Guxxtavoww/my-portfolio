@@ -1,3 +1,4 @@
+import { StaticImageData } from 'next/image';
 import type { IconType } from 'react-icons';
 
 export interface iLink {
@@ -23,7 +24,12 @@ export interface iProject {
   title: string;
   description: string;
   tags: string[];
-  imageUrl: string;
+  imageUrl: StaticImageData;
+}
+
+export interface iProjectData {
+  sectionName: string;
+  projects: iProject[];
 }
 
 export interface iIntroData {
@@ -33,6 +39,11 @@ export interface iIntroData {
     className?: string;
     content: string;
   }[];
+}
+
+export interface iSkills {
+  sectionName: string;
+  skills: Skills;
 }
 
 export interface iAboutData {
@@ -66,8 +77,8 @@ export interface iTranslation {
   lang: Langs;
   links: iLink[];
   experiences: iExperience[];
-  projects: iProject[];
-  skills: Skills;
+  projects: iProjectData;
+  skillsData: iSkills;
   intro: iIntroData;
   about: iAboutData;
   footer: iFooterData;

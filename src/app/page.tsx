@@ -2,7 +2,9 @@
 
 import Intro from '@/containers/intro';
 import About from '@/containers/about';
+import Projects from '@/containers/projects/projects';
 import SectionDivider from '@/components/layout/section-divider';
+import Skills from '@/containers/skills';
 
 export default function Page() {
   return (
@@ -10,6 +12,8 @@ export default function Page() {
       <Intro />
       <SectionDivider />
       <About />
+      <Projects />
+      <Skills />
     </>
   );
 }
