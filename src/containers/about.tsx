@@ -5,9 +5,11 @@ import { motion } from 'framer-motion';
 
 import { useSectionInView } from '@/hooks/useSectionInView.hook';
 import SectionHeading from '@/components/layout/section-heading';
+import { useTranslations } from '@/contexts/translation.context';
 
 export default function About() {
   const { ref } = useSectionInView('#about');
+  const { currentTranslation, isLoadingTranslation } = useTranslations();
 
   return (
     <motion.section
@@ -18,29 +20,59 @@ export default function About() {
       transition={{ delay: 0.175 }}
       id="about"
     >
-      <SectionHeading>About me</SectionHeading>
-      <p className="mb-3">
-        I decided to pursue my passion for programming. I enrolled in a coding
-        bootcamp and learned{' '}
-        <span className="font-medium">full-stack web development</span>.{' '}
-        <span className="italic">My favorite part of programming</span> is the
-        problem-solving aspect. I <span className="underline">love</span> the
-        feeling of finally figuring out a solution to a problem. My core stack
-        is{' '}
-        <span className="font-medium">
-          React, Next.js, Node.js, and MongoDB
-        </span>
-        . I am also familiar with TypeScript and Prisma. I am always looking to
-        learn new technologies. I am currently looking for a{' '}
-        <span className="font-medium">full-time position</span> as a software
-        developer.
-      </p>
-      <p>
-        <span className="italic">When I'm not coding</span>, I enjoy playing
-        video games, watching movies, and playing with my dog. I also enjoy{' '}
-        <span className="font-medium">learning new things</span>. I am currently
-        learning about NestJS and MicroServices
-      </p>
+      <SectionHeading>
+        {isLoadingTranslation ? (
+          <div className="flex items-center justify-center w-full">
+            <div className="w-1/2 rounded-lg bg-gray-400 h-12 animate-pulse" />
+          </div>
+        ) : (
+          currentTranslation!.about.sectionHeading
+        )}
+      </SectionHeading>
+      {isLoadingTranslation ? (
+        <div className="flex flex-col gap-3 items-start w-full">
+          <div className="h-10 w-full max-w-lg rounded-md animate-pulse bg-gray-500" />
+          <div className="h-10 w-full max-w-lg rounded-md animate-pulse bg-gray-500" />
+          <div className="h-10 w-full max-w-lg rounded-md animate-pulse bg-gray-500" />
+        </div>
+      ) : (
+        <>
+          <p className="mb-3">
+            {currentTranslation?.about.paragraph1}{' '}
+            <span className="font-bold">
+              {currentTranslation?.about.highlight1}
+            </span>{' '}
+            &&{' '}
+            <span className="font-bold">
+              {currentTranslation?.about.highlight2}
+            </span>{' '}
+            {currentTranslation?.about.paragraph1_continuation}{' '}
+            <span className="font-bold">
+              {currentTranslation?.about.highlight3}
+            </span>{' '}
+            {currentTranslation?.about.paragraph1_continuation2}{' '}
+            <span className="font-bold">
+              {currentTranslation?.about.highlight4}
+            </span>{' '}
+            {currentTranslation?.about.paragraph1_continuation3}{' '}
+            <span className="font-bold">
+              {currentTranslation?.about.highlight5}.
+            </span>
+          </p>
+          <p className="mb-3">
+            {currentTranslation?.about.paragraph2}{' '}
+            <span className="font-bold">
+              {currentTranslation?.about.highlight6}
+            </span>{' '}
+            {currentTranslation?.about.paragraph2_continuation}{' '}
+            <span className="font-bold">
+              {currentTranslation?.about.highlight7}
+            </span>{' '}
+            {currentTranslation?.about.paragraph2_continuation2}
+          </p>
+          <p>{currentTranslation?.about.paragraph3}</p>
+        </>
+      )}
     </motion.section>
   );
 }

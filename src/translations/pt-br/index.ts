@@ -26,13 +26,40 @@ export const ptBr: iTranslation = {
       { type: 'text', content: ' de experiência. Eu gosto de construir ' },
       { type: 'span', className: 'italic', content: 'sites e aplicativos' },
       { type: 'text', content: '. Meu foco é ' },
-      { type: 'span', className: 'underline', content: 'React (Next.js) e NestJS' },
+      {
+        type: 'span',
+        className: 'underline',
+        content: 'React (Next.js) e NestJS',
+      },
     ],
+  },
+  about: {
+    sectionHeading: 'Sobre mim',
+    paragraph1:
+      'Olá! Sou o Gustavo, apaixonado por desvendar os segredos por trás de',
+    highlight1: 'jogos',
+    highlight2: 'tecnologia',
+    paragraph1_continuation:
+      'desde cedo. O fascínio tornou-se uma paixão quando experimentei pela primeira vez um',
+    highlight3: 'Arduino',
+    paragraph1_continuation2: ', despertando meu interesse em',
+    highlight4: 'lógica de programação',
+    paragraph1_continuation3: 'e a maravilha da',
+    highlight5: 'internet',
+    paragraph2: 'Com um background técnico sólido, mergulhei no universo do',
+    highlight6: 'desenvolvimento web',
+    paragraph2_continuation:
+      'após concluir meus estudos. Ao longo de 3 anos, cresci profissionalmente trabalhando como',
+    highlight7: 'desenvolvedor web',
+    paragraph2_continuation2:
+      'para freelancers e empresas. Meu objetivo agora é ampliar minha rede de contatos e aprimorar ainda mais minhas habilidades.',
+    paragraph3:
+      'Estou sempre aberto a novas oportunidades e conexões. Se você está procurando colaborações ou simplesmente deseja trocar ideias, não hesite em me chamar. Vamos construir algo incrível juntos! 👊',
   },
   footer: {
     copyRightText: 'Todos os direitos reservados.',
     aboutBoldText: 'Sobre esse site:',
     aboutText:
-      'contruido com React & Next.js (App Router & Server Actions), TypeScript, Tailwind CSS, Framer Motion, React Email & Resend, hospedagem na plataforma Vercel.',
+      'construído com React & Next.js (App Router & Server Actions), TypeScript, Tailwind CSS, Framer Motion, React Email & Resend, hospedagem na plataforma Vercel.',
   },
 };

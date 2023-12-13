@@ -57,6 +57,30 @@ export const eng: iTranslation = {
       },
     ],
   },
+  about: {
+    sectionHeading: 'About me',
+    paragraph1:
+      "Hello! I'm Gustavo, passionate about uncovering the secrets behind",
+    highlight1: 'games',
+    highlight2: 'technology',
+    paragraph1_continuation:
+      'since an early age. The fascination turned into a passion when I first experimented with an',
+    highlight3: 'Arduino',
+    paragraph1_continuation2: ', sparking my interest in',
+    highlight4: 'programming logic',
+    paragraph1_continuation3: 'and the wonders of the',
+    highlight5: 'internet',
+    paragraph2:
+      'With a solid technical background, I immersed myself in the universe of',
+    highlight6: 'web development',
+    paragraph2_continuation:
+      'after completing my studies. Over 3 years, I grew professionally working as a',
+    highlight7: 'web developer',
+    paragraph2_continuation2:
+      'for freelancers and companies. My goal now is to expand my network and further enhance my skills.',
+    paragraph3:
+      "I'm always open to new opportunities and connections. If you're looking for collaborations or just want to exchange ideas, feel free to reach out. Let's build something amazing together! 👊",
+  },
   footer: {
     copyRightText: 'All rights reserved.',
     aboutBoldText: 'About this website:',

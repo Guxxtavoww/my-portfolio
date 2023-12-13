@@ -35,6 +35,25 @@ export interface iIntroData {
   }[];
 }
 
+export interface iAboutData {
+  sectionHeading: string;
+  paragraph1: string;
+  highlight1: string;
+  highlight2: string;
+  paragraph1_continuation: string;
+  highlight3: string;
+  paragraph1_continuation2: string;
+  highlight4: string;
+  paragraph1_continuation3: string;
+  highlight5: string;
+  paragraph2: string;
+  highlight6: string;
+  paragraph2_continuation: string;
+  highlight7: string;
+  paragraph2_continuation2: string;
+  paragraph3: string;
+}
+
 export interface iFooterData {
   copyRightText: string;
   aboutBoldText: string;
@@ -50,5 +69,6 @@ export interface iTranslation {
   projects: iProject[];
   skills: Skills;
   intro: iIntroData;
+  about: iAboutData;
   footer: iFooterData;
 }
