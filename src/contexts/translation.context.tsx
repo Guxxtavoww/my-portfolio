@@ -5,6 +5,7 @@ import {
   useCallback,
   useContext,
   useEffect,
+  useMemo,
   useState,
   useTransition,
 } from 'react';
@@ -14,7 +15,7 @@ import { iTranslation } from '@/translations/types';
 import { usePersitedState } from '@/hooks/usePersistedState.hook';
 
 interface iTranslationsContextProps {
-  currentTranslation: iTranslation;
+  currentTranslation: iTranslation | undefined;
   isLoadingTranslation: boolean;
   setCurrentTranslation: (lang: Langs) => void;
   handleToggleTranslation: () => void;
@@ -25,12 +26,9 @@ export const TranslationsContext =
 
 export function TranslationProvider({ children }: WithChildren) {
   const [isPending, startTransiton] = useTransition();
-  const [currentTranslationKey, setCurrentTranslationKey] = usePersitedState<
-    Maybe<Langs>
-  >(null, 'current-translation');
-  const [currentTranslation, setCurrentTranslation] = useState<iTranslation>(
-    {} as iTranslation
-  );
+  const [currentTranslationKey, setCurrentTranslationKey] =
+    usePersitedState<Langs>('pt-br', 'current-translation');
+  const [currentTranslation, setCurrentTranslation] = useState<iTranslation>();
 
   const handleSetCurrentTranslation = useCallback(
     (lang: Langs) => {
@@ -45,19 +43,22 @@ export function TranslationProvider({ children }: WithChildren) {
 
   useEffect(() => {
     startTransiton(async () => {
-      const currentTranslation = await getTranslation(
-        currentTranslationKey || 'pt-br'
-      );
+      const currentTranslation = await getTranslation(currentTranslationKey);
 
       setCurrentTranslation(currentTranslation);
     });
   }, [currentTranslationKey]);
 
+  const isLoadingTranslation = useMemo(
+    () => isPending || !currentTranslation,
+    [isPending, currentTranslation]
+  );
+
   return (
     <TranslationsContext.Provider
       value={{
         currentTranslation,
-        isLoadingTranslation: isPending,
+        isLoadingTranslation,
         setCurrentTranslation: handleSetCurrentTranslation,
         handleToggleTranslation,
       }}

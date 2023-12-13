@@ -1,5 +1,6 @@
 'use client';
 
+import Header from '@/components/layout/header';
 import { useTranslations } from '@/contexts/translation.context';
 
 export default function Page() {
@@ -9,15 +10,6 @@ export default function Page() {
   return (
     <>
       <button onClick={handleToggleTranslation}>Trocar</button>
-      {isLoadingTranslation ? (
-        <span>Carregando...</span>
-      ) : (
-        <div className="max-w-full ">
-          <pre className="w-full">
-            {JSON.stringify(currentTranslation, null, 2)}
-          </pre>
-        </div>
-      )}
     </>
   );
 }
