@@ -11,4 +11,10 @@ export const eng: iTranslation = {
   links: getLinks('eng'),
   projects: getProjects('eng'),
   skills: skillsData,
+  footer: {
+    copyRightText: 'All rights reserved.',
+    aboutBoldText: 'About this website:',
+    aboutText:
+      'built with React & Next.js (App Router & Server Actions), TypeScript, Tailwind CSS, Framer Motion, React Email & Resend, Vercel hosting.',
+  },
 };

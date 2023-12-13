@@ -1,7 +1,4 @@
-interface iLink {
-  name: string;
-  hash: string;
-}
+import { iLink } from '@/translations/types';
 
 const linksPt: iLink[] = [
   {

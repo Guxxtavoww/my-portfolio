@@ -1,15 +1,15 @@
 'use client';
 
-import Header from '@/components/layout/header';
 import { useTranslations } from '@/contexts/translation.context';
 
 export default function Page() {
-  const { isLoadingTranslation, handleToggleTranslation, currentTranslation } =
-    useTranslations();
+  const { isLoadingTranslation, handleToggleTranslation } = useTranslations();
 
   return (
     <>
-      <button onClick={handleToggleTranslation}>Trocar</button>
+      <button onClick={handleToggleTranslation} disabled={isLoadingTranslation}>
+        Trocar
+      </button>
     </>
   );
 }

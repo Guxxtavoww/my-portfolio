@@ -2,7 +2,13 @@ import type { IconType } from 'react-icons';
 
 export interface iLink {
   name: string;
-  hash: string;
+  hash:
+    | '#home'
+    | '#about'
+    | '#projects'
+    | '#skills'
+    | '#experience'
+    | '#contact';
 }
 
 export interface iExperience {
@@ -20,6 +26,12 @@ export interface iProject {
   imageUrl: string;
 }
 
+export interface iFooterData {
+  copyRightText: string;
+  aboutBoldText: string;
+  aboutText: string;
+}
+
 export type Skills = string[];
 
 export interface iTranslation {
@@ -28,4 +40,5 @@ export interface iTranslation {
   experiences: iExperience[];
   projects: iProject[];
   skills: Skills;
+  footer: iFooterData;
 }

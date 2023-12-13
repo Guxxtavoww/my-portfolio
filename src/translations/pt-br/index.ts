@@ -11,4 +11,10 @@ export const ptBr: iTranslation = {
   links: getLinks('pt-br'),
   projects: getProjects('pt-br'),
   skills: skillsData,
+  footer: {
+    copyRightText: 'Todos os direitos reservados.',
+    aboutBoldText: 'Sobre esse site:',
+    aboutText:
+      'contruido com React & Next.js (App Router & Server Actions), TypeScript, Tailwind CSS, Framer Motion, React Email & Resend, hospedagem na plataforma Vercel.',
+  },
 };
