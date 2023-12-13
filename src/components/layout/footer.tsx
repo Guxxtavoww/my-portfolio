@@ -10,7 +10,7 @@ export default function Footer() {
 
   return (
     <footer
-      className={clsx('mb-10 px-4 text-center text-gray-500', {
+      className={clsx('mb-10 px-4 text-center text-gray-500 dark:text-white', {
         'flex items-center justify-center': isLoadingTranslation,
       })}
     >
