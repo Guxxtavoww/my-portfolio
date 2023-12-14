@@ -8,4 +8,10 @@ declare global {
   };
 
   export type Langs = readonly 'pt-br' | 'eng';
+
+  namespace NodeJS {
+    export interface ProcessEnv {
+      RESEND_API_KEY: string;
+    }
+  }
 }

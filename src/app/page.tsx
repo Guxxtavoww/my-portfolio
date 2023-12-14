@@ -3,6 +3,7 @@
 import Intro from '@/containers/intro';
 import About from '@/containers/about';
 import Skills from '@/containers/skills';
+import Contact from '@/containers/contact';
 import Experience from '@/containers/experience';
 import Projects from '@/containers/projects/projects';
 import SectionDivider from '@/components/layout/section-divider';
@@ -16,6 +17,7 @@ export default function Page() {
       <Projects />
       <Skills />
       <Experience />
+      <Contact />
     </>
   );
 }

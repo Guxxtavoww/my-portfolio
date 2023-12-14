@@ -65,6 +65,14 @@ export const ptBr: iTranslation = {
     paragraph3:
       'Estou sempre aberto a novas oportunidades e conexões. Se você está procurando colaborações ou simplesmente deseja trocar ideias, não hesite em me chamar. Vamos construir algo incrível juntos! 👊',
   },
+  contactData: {
+    sectionHeading: 'Faça Contato',
+    contactText: 'Por favor me chame diretamente aqui ',
+    orText: 'ou pelo formulário abaixo',
+    emailInputPlaceholder: 'Seu email',
+    textAreaPlaceholder: 'Sua mensagem',
+    submitButtonText: 'Enviar',
+  },
   footer: {
     copyRightText: 'Todos os direitos reservados.',
     aboutBoldText: 'Sobre esse site:',

@@ -90,6 +90,14 @@ export const eng: iTranslation = {
     paragraph3:
       "I'm always open to new opportunities and connections. If you're looking for collaborations or just want to exchange ideas, feel free to reach out. Let's build something amazing together! 👊",
   },
+  contactData: {
+    sectionHeading: 'Contact Me',
+    contactText: 'Please contact me directly at ',
+    orText: 'or through this form.',
+    emailInputPlaceholder: 'Your email',
+    textAreaPlaceholder: 'Your message',
+    submitButtonText: 'Send',
+  },
   footer: {
     copyRightText: 'All rights reserved.',
     aboutBoldText: 'About this website:',

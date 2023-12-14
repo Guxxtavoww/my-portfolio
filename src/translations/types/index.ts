@@ -1,5 +1,4 @@
 import { StaticImageData } from 'next/image';
-import type { IconType } from 'react-icons';
 
 export interface iLink {
   name: string;
@@ -78,6 +77,15 @@ export interface iFooterData {
 
 export type Skills = string[];
 
+export interface iContactData {
+  sectionHeading: string;
+  contactText: string;
+  orText: string;
+  emailInputPlaceholder: string;
+  textAreaPlaceholder: string;
+  submitButtonText: string;
+}
+
 export interface iTranslation {
   lang: Langs;
   links: iLink[];
@@ -86,5 +94,6 @@ export interface iTranslation {
   skillsData: iSkills;
   intro: iIntroData;
   about: iAboutData;
+  contactData: iContactData;
   footer: iFooterData;
 }
