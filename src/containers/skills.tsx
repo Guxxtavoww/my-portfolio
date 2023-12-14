@@ -44,7 +44,7 @@ export default function Skills() {
             ))
           : currentTranslation?.skillsData.skills.map((skill, index) => (
               <motion.li
-                className="bg-white borderBlack rounded-xl transition-all px-5 py-3 dark:bg-white/10 dark:text-white/80 hover:bg-gray-300 cursor-pointer"
+                className="bg-white borderBlack rounded-xl transition-all px-5 py-3 dark:bg-white/10 dark:text-white/80 hover:bg-gray-300 cursor-pointer select-none"
                 key={index}
                 variants={fadeInAnimationVariants}
                 initial="initial"

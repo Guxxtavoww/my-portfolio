@@ -7,7 +7,10 @@ import { iTranslation } from '../types';
 
 export const eng: iTranslation = {
   lang: 'eng',
-  experiences: getExperiences('eng'),
+  experiencesData: {
+    sectionHeading: 'Experiences',
+    experiences: getExperiences('eng'),
+  },
   links: getLinks('eng'),
   projects: {
     sectionName: 'Projects',

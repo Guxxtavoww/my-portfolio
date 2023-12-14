@@ -16,7 +16,7 @@ export interface iExperience {
   title: string;
   location: string;
   description: string;
-  icon: IconType;
+  icon: JSX.Element;
   date: string;
 }
 
@@ -65,6 +65,11 @@ export interface iAboutData {
   paragraph3: string;
 }
 
+export interface iExperienceData {
+  sectionHeading: string;
+  experiences: iExperience[];
+}
+
 export interface iFooterData {
   copyRightText: string;
   aboutBoldText: string;
@@ -76,7 +81,7 @@ export type Skills = string[];
 export interface iTranslation {
   lang: Langs;
   links: iLink[];
-  experiences: iExperience[];
+  experiencesData: iExperienceData;
   projects: iProjectData;
   skillsData: iSkills;
   intro: iIntroData;
