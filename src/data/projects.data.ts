@@ -1,4 +1,4 @@
-import { nextJsBlogBanner, wmsBanner } from '@/assets';
+import { eventsApp, nextJsBlogBanner, wmsBanner } from '@/assets';
 import { iProject } from '@/translations/types';
 
 export const engProjects: iProject[] = [
@@ -15,6 +15,22 @@ export const engProjects: iProject[] = [
     tags: ['React', 'TypeScript', 'Redux', 'Styled Components'],
     imageUrl: wmsBanner,
   },
+  {
+    title: 'Events App',
+    description:
+      'A events managment platform, that includes authentication and payment',
+    imageUrl: eventsApp,
+    tags: [
+      'React',
+      'Next.js',
+      'Tailwind',
+      'Shadcn UI',
+      'Prisma',
+      'PostgreSql',
+      'Stripe.js',
+      'Clerk.js',
+    ],
+  },
 ];
 
 export const ptBrProjects: iProject[] = [
@@ -30,6 +46,21 @@ export const ptBrProjects: iProject[] = [
       'Ferramenta de gerenciamento de centros de distribuição (CD), extremamente desafiador, pela natureza volátil das regras de negócio',
     tags: ['React', 'TypeScript', 'Redux', 'Styled Components'],
     imageUrl: wmsBanner,
+  },
+  {
+    title: 'App de eventos',
+    description: 'Um app de criação e gerenciamentos de eventos customizados',
+    imageUrl: eventsApp,
+    tags: [
+      'React',
+      'Next.js',
+      'Tailwind',
+      'Shadcn UI',
+      'Prisma',
+      'PostgreSql',
+      'Stripe.js',
+      'Clerk.js',
+    ],
   },
 ];
 
