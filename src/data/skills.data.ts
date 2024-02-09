@@ -25,5 +25,6 @@ export const skillsData = [
   'Docker',
   'React Native',
   'Zod',
-  'Rust'
+  'Rust',
+  'React Hook Form',
 ].sort();

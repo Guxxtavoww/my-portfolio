@@ -38,7 +38,7 @@ export const ptBr: iTranslation = {
       {
         type: 'span',
         className: 'underline',
-        content: 'React (Next.js) e NestJS',
+        content: 'React (Next.js), NestJS && Rust',
       },
     ],
   },
