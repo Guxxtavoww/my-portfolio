@@ -24,5 +24,6 @@ export const skillsData = [
   'MySql',
   'Docker',
   'React Native',
-  'Zod'
+  'Zod',
+  'Rust'
 ].sort();
