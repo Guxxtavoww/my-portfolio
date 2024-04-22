@@ -1,3 +1,4 @@
+import { initialXpYear } from '@/constants';
 import { getLinks } from '@/data/links.data';
 import { skillsData } from '@/data/skills.data';
 import { getProjects } from '@/data/projects.data';
@@ -31,7 +32,11 @@ export const ptBr: iTranslation = {
         content: 'desenvolvedor full-stack',
       },
       { type: 'text', content: ' com ' },
-      { type: 'span', className: 'font-bold', content: '3 anos' },
+      {
+        type: 'span',
+        className: 'font-bold',
+        content: `${new Date().getFullYear() - initialXpYear} anos`,
+      },
       { type: 'text', content: ' de experiência. Eu gosto de construir ' },
       { type: 'span', className: 'italic', content: 'sites e aplicativos' },
       { type: 'text', content: '. Meu foco é ' },
