@@ -9,7 +9,7 @@ import 'react-vertical-timeline-component/style.min.css';
 
 import { useTheme } from '@/contexts/theme.context';
 import { useTranslations } from '@/contexts/translation.context';
-import { useSectionInView } from '@/hooks/useSectionInView.hook';
+import { useSectionInView } from '@/hooks/use-section-in-view.hook';
 import SectionHeading from '@/components/layout/section-heading';
 
 export default function Experience() {

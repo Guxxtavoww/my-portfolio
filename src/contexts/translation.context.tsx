@@ -12,7 +12,7 @@ import {
 
 import getTranslation from '@/translations';
 import { iTranslation } from '@/translations/types';
-import { usePersitedState } from '@/hooks/usePersistedState.hook';
+import { usePersitedState } from '@/hooks/use-persisted-state.hook';
 
 interface iTranslationsContextProps {
   currentTranslation: iTranslation | undefined;

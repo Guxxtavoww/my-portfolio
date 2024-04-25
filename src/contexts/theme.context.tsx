@@ -7,7 +7,7 @@ import React, {
   useCallback,
 } from 'react';
 
-import { usePersitedState } from '@/hooks/usePersistedState.hook';
+import { usePersitedState } from '@/hooks/use-persisted-state.hook';
 
 type Theme = 'light' | 'dark';
 

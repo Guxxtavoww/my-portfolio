@@ -3,7 +3,7 @@
 import React from 'react';
 import { Variants, motion } from 'framer-motion';
 
-import { useSectionInView } from '@/hooks/useSectionInView.hook';
+import { useSectionInView } from '@/hooks/use-section-in-view.hook';
 import { useTranslations } from '@/contexts/translation.context';
 import SectionHeading from '@/components/layout/section-heading';
 

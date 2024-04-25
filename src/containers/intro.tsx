@@ -8,7 +8,7 @@ import { HiDownload } from 'react-icons/hi';
 import { FaGithubSquare } from 'react-icons/fa';
 import { BsArrowRight, BsLinkedin } from 'react-icons/bs';
 
-import { useSectionInView } from '@/hooks/useSectionInView.hook';
+import { useSectionInView } from '@/hooks/use-section-in-view.hook';
 import { useActiveSection } from '@/contexts/active-section.context';
 import { useTranslations } from '@/contexts/translation.context';
 import { myGithubLink, myLinkdinLink } from '@/constants';

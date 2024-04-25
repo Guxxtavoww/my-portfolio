@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 import { myEmail } from '@/constants';
 import { sendEmail } from '@/actions/send-email.action';
 import SubmitButton from '@/components/layout/submit-button';
-import { useSectionInView } from '@/hooks/useSectionInView.hook';
+import { useSectionInView } from '@/hooks/use-section-in-view.hook';
 import { useTranslations } from '@/contexts/translation.context';
 import SectionHeading from '@/components/layout/section-heading';
 

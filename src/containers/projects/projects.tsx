@@ -4,7 +4,7 @@ import React from 'react';
 
 import SectionHeading from '@/components/layout/section-heading';
 import { useTranslations } from '@/contexts/translation.context';
-import { useSectionInView } from '@/hooks/useSectionInView.hook';
+import { useSectionInView } from '@/hooks/use-section-in-view.hook';
 
 import Project from './project';
 
