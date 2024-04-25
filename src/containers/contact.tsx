@@ -7,9 +7,9 @@ import { motion } from 'framer-motion';
 import { myEmail } from '@/constants';
 import { sendEmail } from '@/actions/send-email.action';
 import SubmitButton from '@/components/layout/submit-button';
-import { useSectionInView } from '@/hooks/use-section-in-view.hook';
 import { useTranslations } from '@/contexts/translation.context';
 import SectionHeading from '@/components/layout/section-heading';
+import { useSectionInView } from '@/hooks/use-section-in-view.hook';
 
 export default function Contact() {
   const [isPending, startTransition] = useTransition();
@@ -68,7 +68,7 @@ export default function Contact() {
           placeholder={currentTranslation?.contactData.emailInputPlaceholder}
         />
         <textarea
-          className="h-52 my-3 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+          className="h-52 overflow-y-auto my-3 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none resize-none"
           name="message"
           required
           maxLength={5000}

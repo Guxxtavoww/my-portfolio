@@ -1,3 +1,4 @@
+import { yearsOfExpirence } from '@/constants';
 import { getLinks } from '@/data/links.data';
 import { skillsData } from '@/data/skills.data';
 import { getProjects } from '@/data/projects.data';
@@ -44,7 +45,7 @@ export const eng: iTranslation = {
       {
         type: 'span',
         className: 'font-bold',
-        content: '3 years',
+        content: `${yearsOfExpirence} years`,
       },
       {
         type: 'text',
