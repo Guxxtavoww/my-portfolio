@@ -9,10 +9,11 @@ import {
   useState,
   useTransition,
 } from 'react';
+import { useRouter } from 'next/navigation';
 
 import getTranslation from '@/translations';
 import { iTranslation } from '@/translations/types';
-import { usePersitedState } from '@/hooks/use-persisted-state.hook';
+import { useSearchUrl } from '@/hooks/use-search-url.hook';
 
 interface iTranslationsContextProps {
   currentTranslation: iTranslation | undefined;
@@ -25,29 +26,35 @@ export const TranslationsContext =
   createContext<Maybe<iTranslationsContextProps>>(undefined);
 
 export function TranslationProvider({ children }: WithChildren) {
+  const router = useRouter();
   const [isPending, startTransiton] = useTransition();
-  const [currentTranslationKey, setCurrentTranslationKey] =
-    usePersitedState<Langs>('pt-br', 'current-translation');
   const [currentTranslation, setCurrentTranslation] = useState<iTranslation>();
+
+  const { handleSetSearchParam, getSearchParamValue } = useSearchUrl<Langs>(
+    'lang',
+    'pt-br'
+  );
 
   const handleSetCurrentTranslation = useCallback(
     (lang: Langs) => {
-      setCurrentTranslationKey(lang);
+      handleSetSearchParam(lang);
     },
-    [setCurrentTranslationKey]
+    [handleSetSearchParam]
   );
 
   const handleToggleTranslation = useCallback(() => {
-    setCurrentTranslationKey((prev) => (prev === 'eng' ? 'pt-br' : 'eng'));
-  }, [setCurrentTranslationKey]);
+    const newLang = getSearchParamValue() === 'eng' ? 'pt-br' : 'eng';
+
+    handleSetSearchParam(newLang);
+  }, [getSearchParamValue, handleSetSearchParam]);
 
   useEffect(() => {
     startTransiton(async () => {
-      const currentTranslation = await getTranslation(currentTranslationKey);
+      const currentTranslation = await getTranslation(getSearchParamValue()!);
 
       setCurrentTranslation(currentTranslation);
     });
-  }, [currentTranslationKey]);
+  }, [getSearchParamValue]);
 
   const isLoadingTranslation = useMemo(
     () => isPending || !currentTranslation,
