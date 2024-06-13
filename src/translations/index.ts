@@ -1,6 +1,6 @@
 'use client';
 
-export default async function getTranslation(lang: Langs) {
+export default async function getTranslation(lang?: Langs) {
   switch (lang) {
     case 'pt-br':
       return import('./pt-br').then(({ ptBr }) => Promise.resolve(ptBr));

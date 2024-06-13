@@ -50,7 +50,7 @@ export function TranslationProvider({ children }: WithChildren) {
 
   useEffect(() => {
     startTransiton(async () => {
-      const currentTranslation = await getTranslation(getSearchParamValue()!);
+      const currentTranslation = await getTranslation(getSearchParamValue());
 
       setCurrentTranslation(currentTranslation);
     });
