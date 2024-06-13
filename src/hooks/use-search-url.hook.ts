@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback } from 'react';
+import { useCallback, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import { usePathname, useSearchParams } from 'next/navigation';
 
@@ -18,17 +18,20 @@ export function useSearchUrl<Value = string>(
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
+  const params = useMemo(
+    () => new URLSearchParams(searchParams.toString()),
+    [searchParams]
+  );
+
   const handleSetSearchParam = useCallback(
     (value: string) => {
-      const params = new URLSearchParams(searchParams.toString());
-    
       params.set(key, value);
 
       const newSearchParams = params.toString();
 
       return router.push(`${pathname}?${newSearchParams}`, { scroll: false });
     },
-    [searchParams, key, router, pathname]
+    [key, router, pathname, params]
   );
 
   const getSearchParamValue = useCallback(() => {
