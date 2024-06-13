@@ -9,7 +9,6 @@ import {
   useState,
   useTransition,
 } from 'react';
-import { useRouter } from 'next/navigation';
 
 import getTranslation from '@/translations';
 import { iTranslation } from '@/translations/types';
@@ -26,7 +25,6 @@ export const TranslationsContext =
   createContext<Maybe<iTranslationsContextProps>>(undefined);
 
 export function TranslationProvider({ children }: WithChildren) {
-  const router = useRouter();
   const [isPending, startTransiton] = useTransition();
   const [currentTranslation, setCurrentTranslation] = useState<iTranslation>();
 
