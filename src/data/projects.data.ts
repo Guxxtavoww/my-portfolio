@@ -1,5 +1,10 @@
-import { eventsApp, nextJsBlogBanner, wmsBanner } from '@/assets';
 import { iProject } from '@/translations/types';
+import {
+  eventsApp,
+  nextJsBlogBanner,
+  wmsBanner,
+  expediaBanner,
+} from '@/assets';
 
 export const engProjects: iProject[] = [
   {
@@ -31,6 +36,13 @@ export const engProjects: iProject[] = [
       'Clerk.js',
     ],
   },
+  {
+    title: 'Expedia Scrappy',
+    description:
+      'A hotels managment platform, includes scrapping to calculate avareges numbers between hotels',
+    imageUrl: expediaBanner,
+    tags: ['Nest.js', 'PostgreSql', 'Jwt', 'TypeORM', 'Swagger', 'Zod'],
+  },
 ];
 
 export const ptBrProjects: iProject[] = [
@@ -61,6 +73,13 @@ export const ptBrProjects: iProject[] = [
       'Stripe.js',
       'Clerk.js',
     ],
+  },
+  {
+    title: 'Expedia Scrappy',
+    description:
+      'Uma plataforma de gestão de hotéis, inclui scraping para calcular números médios entre hotéis',
+    imageUrl: expediaBanner,
+    tags: ['Nest.js', 'PostgreSql', 'Jwt', 'TypeORM', 'Swagger', 'Zod'],
   },
 ];
 
