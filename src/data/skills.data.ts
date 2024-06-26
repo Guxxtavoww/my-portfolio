@@ -27,4 +27,7 @@ export const skillsData = [
   'Zod',
   'Rust',
   'React Hook Form',
+  'Tauri JS',
+  'Expo CLI',
+  'Bash',
 ].sort();
