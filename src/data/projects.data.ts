@@ -11,7 +11,7 @@ export const engProjects: iProject[] = [
   {
     title: 'WMS',
     description:
-      'A destribution center managment tool, very challeging due to the volatile nature of the bussiness logis',
+      'A destribution center managment tool, very challeging due to the volatile nature of the bussiness logic',
     tags: ['React', 'TypeScript', 'Redux', 'Styled Components'],
     imageUrl: wmsBanner,
   },
