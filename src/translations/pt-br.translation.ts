@@ -4,7 +4,7 @@ import { skillsData } from '@/data/skills.data';
 import { getProjects } from '@/data/projects.data';
 import { getExperiences } from '@/data/experiences.data';
 
-import { iTranslation } from '../types';
+import type { iTranslation } from './translations.types';
 
 export const ptBr: iTranslation = {
   lang: 'pt-br',

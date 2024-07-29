@@ -10,9 +10,9 @@ import {
   useTransition,
 } from 'react';
 
-import getTranslation from '@/translations';
-import { iTranslation } from '@/translations/types';
+import { getTranslation } from '@/translations';
 import { useSearchUrl } from '@/hooks/use-search-url.hook';
+import type { iTranslation } from '@/translations/translations.types';
 
 interface iTranslationsContextProps {
   currentTranslation: iTranslation | undefined;
