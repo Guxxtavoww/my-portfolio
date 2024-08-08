@@ -1,4 +1,4 @@
-import { iProject } from '@/translations/types';
+import type { iProject } from '@/translations/translations.types';
 import {
   eventsApp,
   nextJsBlogBanner,

@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
-import { iProject } from '@/translations/types';
+import type { iProject } from '@/translations/translations.types';
 
 export default function Project({
   description,

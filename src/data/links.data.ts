@@ -1,4 +1,4 @@
-import { iLink } from '@/translations/types';
+import type { iLink } from '@/translations/translations.types';
 
 const linksPt: iLink[] = [
   {

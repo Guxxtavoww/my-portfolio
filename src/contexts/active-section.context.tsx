@@ -2,7 +2,7 @@
 
 import React, { useState, createContext, useContext, useCallback } from 'react';
 
-import { iLink } from '@/translations/types';
+import type { iLink } from '@/translations/translations.types';
 
 interface iActiveSectionContextTypeProps {
   activeSection: string;

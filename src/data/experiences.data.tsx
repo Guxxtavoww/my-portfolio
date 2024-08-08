@@ -3,7 +3,7 @@ import { FaReact, FaServer } from 'react-icons/fa';
 import { CgWorkAlt } from 'react-icons/cg';
 import { LuGraduationCap } from 'react-icons/lu';
 
-import { iExperience } from '@/translations/types';
+import type { iExperience } from '@/translations/translations.types';
 
 export const engExperiences: iExperience[] = [
   {
