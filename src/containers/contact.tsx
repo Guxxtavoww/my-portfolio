@@ -12,8 +12,8 @@ import SectionHeading from '@/components/layout/section-heading';
 import { useSectionInView } from '@/hooks/use-section-in-view.hook';
 
 export default function Contact() {
-  const [isPending, startTransition] = useTransition();
   const { ref } = useSectionInView('#contact');
+  const [isPending, startTransition] = useTransition();
   const { currentTranslation, isLoadingTranslation } = useTranslations();
 
   return (
