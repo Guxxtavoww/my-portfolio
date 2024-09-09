@@ -43,7 +43,7 @@ export const ptBr: iTranslation = {
       {
         type: 'span',
         className: 'underline',
-        content: 'React (Next.js), NestJS && Rust',
+        content: 'React (Next.js), NestJS e Rust',
       },
     ],
   },
@@ -62,8 +62,7 @@ export const ptBr: iTranslation = {
     highlight5: 'internet',
     paragraph2: 'Com um background técnico sólido, mergulhei no universo do',
     highlight6: 'desenvolvimento web',
-    paragraph2_continuation:
-      'após concluir meus estudos. Ao longo de 3 anos, cresci profissionalmente trabalhando como',
+    paragraph2_continuation: `após concluir meus estudos. Ao longo de ${yearsOfExpirence} anos, cresci profissionalmente trabalhando como`,
     highlight7: 'desenvolvedor web',
     paragraph2_continuation2:
       'para freelancers e empresas. Meu objetivo agora é ampliar minha rede de contatos e aprimorar ainda mais minhas habilidades.',

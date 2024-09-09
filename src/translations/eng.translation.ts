@@ -36,7 +36,7 @@ export const eng: iTranslation = {
       {
         type: 'span',
         className: 'font-bold',
-        content: 'full-stack developer',
+        content: 'full-stack engineer',
       },
       {
         type: 'text',
@@ -63,7 +63,7 @@ export const eng: iTranslation = {
       {
         type: 'span',
         className: 'underline',
-        content: 'React (Next.js), NestJS && Rust',
+        content: 'React (Next.js), NestJS and Rust',
       },
     ],
   },
@@ -82,10 +82,10 @@ export const eng: iTranslation = {
     highlight5: 'internet',
     paragraph2:
       'With a solid technical background, I immersed myself in the universe of',
-    highlight6: 'web development',
+    highlight6: 'full-stack development',
     paragraph2_continuation:
-      'after completing my studies. Over 3 years, I grew professionally working as a',
-    highlight7: 'web developer',
+      `after completing my studies. Over ${yearsOfExpirence} years, I grew professionally working as a`,
+    highlight7: 'full-stack engineer',
     paragraph2_continuation2:
       'for freelancers and companies. My goal now is to expand my network and further enhance my skills.',
     paragraph3:

@@ -2,8 +2,11 @@
 
 export const myGithubLink = 'https://github.com/Guxxtavoww';
 
-export const myLinkdinLink =
+export const myLinkedinPtBrLink =
   'https://www.linkedin.com/in/gustavo-augusto-3a513b1b5/';
+
+export const myLinkedinEngLink =
+  'https://www.linkedin.com/in/gustavo-augusto-3a513b1b5/?locale=en_US';
 
 export const yearsOfExpirence = new Date().getFullYear() - 2019;
 
