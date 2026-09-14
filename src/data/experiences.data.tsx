@@ -75,9 +75,9 @@ const experiences = [
     },
     description: {
       'eng':
-        "I'm now a full-stack developer working as a freelancer. My stack includes React, React Native, Next.js, TypeScript, Tailwind, Prisma, MongoDB, MySQL, TypeORM and NestJS.",
+        'During this period i worked as a full-stack developer being a freelancer. I was responsible for developing web, mobile and back-end applications, both for international and national clients.',
       'pt-br':
-        'Atualmente sou um desenvolvedor full stack trabalhando como freelancer. Minha stack inclui React, React Native, Next.js, TypeScript, Tailwind, Prisma, MongoDB, MySQL, TypeORM e NestJS. Estou aberto a oportunidades em período integral.',
+        'Durante esse período, trabalhei como desenvolvedor full stack sendo freelancer. Fui responsavel por desenvolver aplicações web, mobile e back-ends, tanto para clientes internacionais quanto nacionais.',
     },
   },
   {
