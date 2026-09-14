@@ -1,83 +1,110 @@
 import React from 'react';
-import { FaReact, FaServer } from 'react-icons/fa';
+
 import { CgWorkAlt } from 'react-icons/cg';
+import { FaLaptop, FaServer } from 'react-icons/fa';
 import { LuGraduationCap } from 'react-icons/lu';
+import { SiFreelancer } from 'react-icons/si';
 
 import type { iExperience } from '@/translations/translations.types';
 
-export const engExperiences: iExperience[] = [
+const experiences = [
   {
-    title: 'Freelances',
-    location: 'From Home',
-    description:
-      'After 6 months of intensive studiyng i acted as a freelancer for several satisfyed companies',
-    icon: React.createElement(LuGraduationCap),
+    icon: LuGraduationCap,
     date: '2021 - 2022',
+    title: {
+      'eng': 'Freelances',
+      'pt-br': 'Freelances',
+    },
+    location: {
+      'eng': 'From Home',
+      'pt-br': 'De Casa',
+    },
+    description: {
+      'eng':
+        'After 6 months of intensive studying, I worked as a freelancer for several satisfied companies.',
+      'pt-br':
+        'Após 6 meses de estudos intensivos, atuei como freelancer para várias empresas satisfeitas.',
+    },
   },
   {
-    title: 'Front-End Developer',
-    location: 'São Paulo, São Paulo',
-    description:
-      'I worked as a front-end developer for 2 years in 1 job. I also upskilled to the full stack using tools like NestJS.',
-    icon: React.createElement(CgWorkAlt),
+    icon: CgWorkAlt,
     date: '2022 - 2024',
+    title: {
+      'eng': 'Front-End Developer',
+      'pt-br': 'Desenvolvedor Front-End',
+    },
+    location: {
+      'eng': 'São Paulo, São Paulo',
+      'pt-br': 'São Paulo, São Paulo',
+    },
+    description: {
+      'eng':
+        'I worked as a front-end developer for 2 years in one job. I also upskilled to full stack using tools like NestJS.',
+      'pt-br':
+        'Trabalhei como desenvolvedor front-end por 2 anos em um emprego. Também aprimorei minhas habilidades para full stack usando ferramentas como NestJS.',
+    },
   },
   {
-    title: 'Back-End Developer - Innrev.ai',
-    location: 'From Home',
-    description:
-      'As a freelancer, I worked on a software development project with an American client, closely collaborating with another backend developer. We built a hotel reservation service using NestJS, prioritizing scalability and performance. I maintained clear and effective communication with the client in regular meetings, providing technical support and suggesting solutions. I used PostgreSQL to store and manage data, optimizing performance. This experience allowed me to enhance my technical skills, teamwork, and communication with international clients, contributing to my professional growth.',
-    icon: React.createElement(FaServer),
+    icon: FaServer,
     date: '2024 - 2024',
+    title: {
+      'eng': 'Back-End Developer - Innrev.ai',
+      'pt-br': 'Desenvolvedor Back End - Innrev.ai',
+    },
+    location: {
+      'eng': 'From Home',
+      'pt-br': 'De Casa',
+    },
+    description: {
+      'eng':
+        'As a freelancer, I worked on a software development project with an American client, closely collaborating with another backend developer. We built a hotel reservation service using NestJS, prioritizing scalability and performance. I maintained clear and effective communication with the client in regular meetings, providing technical support and suggesting solutions. I used PostgreSQL to store and manage data, optimizing performance. This experience allowed me to enhance my technical skills, teamwork, and communication with international clients, contributing to my professional growth.',
+      'pt-br':
+        'Como freelancer, trabalhei em um projeto de desenvolvimento de software com um cliente americano, colaborando estreitamente com outro desenvolvedor backend. Construímos um serviço de reserva de hotéis usando NestJS, priorizando a escalabilidade e o desempenho. Mantive comunicação clara e eficaz com o cliente em reuniões regulares, fornecendo suporte técnico e sugerindo soluções. Utilizei PostgreSQL para armazenar e gerenciar dados, otimizando o desempenho. Essa experiência me permitiu aprimorar minhas habilidades técnicas, trabalho em equipe e comunicação com clientes internacionais, contribuindo para o meu crescimento profissional.',
+    },
   },
   {
-    title: 'Full-Stack Developer',
-    location: 'From Home',
-    description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, React Native, Next.js, TypeScript, Tailwind, Prisma, MongoDB, MySql, TypeORM and NestJS. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
-    date: '2024 - present',
+    icon: SiFreelancer,
+    date: '2024 - 2025',
+    title: {
+      'eng': 'Full-Stack Developer',
+      'pt-br': 'Desenvolvedor Full Stack',
+    },
+    location: {
+      'eng': 'From Home',
+      'pt-br': 'De Casa',
+    },
+    description: {
+      'eng':
+        "I'm now a full-stack developer working as a freelancer. My stack includes React, React Native, Next.js, TypeScript, Tailwind, Prisma, MongoDB, MySQL, TypeORM and NestJS. I'm open to full-time opportunities.",
+      'pt-br':
+        'Atualmente sou um desenvolvedor full stack trabalhando como freelancer. Minha stack inclui React, React Native, Next.js, TypeScript, Tailwind, Prisma, MongoDB, MySQL, TypeORM e NestJS. Estou aberto a oportunidades em período integral.',
+    },
   },
-];
+  {
+    icon: FaLaptop,
+    date: '2025 - present',
+    title: {
+      'eng': 'Full-Stack Developer',
+      'pt-br': 'Desenvolvedor Full Stack',
+    },
+    location: {
+      'eng': 'From Home',
+      'pt-br': 'De Casa',
+    },
+    description: {
+      'eng':
+        'I currently work for a company that develops software solutions for international and regional clients, acting as a freelance full-stack developer on on-demand projects. My work focuses primarily on payment management and integrations with third-party APIs.',
+      'pt-br':
+        'Trabalho atualmente em uma empresa que desenvolve soluções de software para clientes internacionais e regionais, atuando como desenvolvedor full stack freelancer em projetos sob demanda. Focando pricipalmente em gereciamento de pagamentos e integrações com APIs de terceiros.',
+    },
+  },
+] as const;
 
-export const ptBrExperiences: iExperience[] = [
-  {
-    title: 'Freelances',
-    location: 'De Casa',
-    description:
-      'Após 6 meses de estudos intensivos, atuei como freelancer para várias empresas satisfeitas',
-    icon: React.createElement(LuGraduationCap),
-    date: '2021 - 2022',
-  },
-  {
-    title: 'Desenvolvedor Front-End',
-    location: 'São Paulo, São Paulo',
-    description:
-      'Trabalhei como desenvolvedor front-end por 2 anos em um emprego. Também aprimorei minhas habilidades para full stack usando ferramentas como NestJS.',
-    icon: React.createElement(CgWorkAlt),
-    date: '2022 - 2024',
-  },
-  {
-    title: 'Desenvolvedor Back End - Innrev.ai',
-    location: 'De casa',
-    description:
-      'Como freelancer, trabalhei em um projeto de desenvolvimento de software com um cliente americano, colaborando estreitamente com outro desenvolvedor backend. Construímos um serviço de reserva de hotéis usando NestJS, priorizando a escalabilidade e o desempenho. Mantive comunicação clara e eficaz com o cliente em reuniões regulares, fornecendo suporte técnico e sugerindo soluções. Utilizei PostgreSQL para armazenar e gerenciar dados, otimizando o desempenho. Essa experiência me permitiu aprimorar minhas habilidades técnicas, trabalho em equipe e comunicação com clientes internacionais, contribuindo para o meu crescimento profissional.',
-    icon: React.createElement(FaServer),
-    date: '2024 - 2024',
-  },
-  {
-    title: 'Desenvolvedor Full Stack',
-    location: 'De Casa',
-    description:
-      'Atualmente sou um desenvolvedor full stack trabalhando como freelancer. Minha stack inclui React, React Native, Next.js, TypeScript, Tailwind, Prisma, MongoDB, MySql, TypeORM e NestJS. Estou aberto a oportunidades em período integral.',
-    icon: React.createElement(FaReact),
-    date: '2024 - presente',
-  },
-];
-
-const experiencesObj: Record<Langs, iExperience[]> = {
-  'pt-br': ptBrExperiences,
-  'eng': engExperiences,
-};
-
-export const getExperiences = (lang: Langs) => experiencesObj[lang];
+export const getExperiences = (lang: Langs): iExperience[] =>
+  experiences.map(({ icon, date, title, location, description }) => ({
+    icon: React.createElement(icon),
+    date,
+    title: title[lang],
+    location: location[lang],
+    description: description[lang],
+  }));
