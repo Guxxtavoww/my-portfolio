@@ -1,8 +1,5 @@
+import { bleveBanner, expediaBanner, wmsBanner } from '@/assets';
 import type { iProject } from '@/translations/translations.types';
-import {
-  wmsBanner,
-  expediaBanner,
-} from '@/assets';
 
 export const engProjects: iProject[] = [
   {
@@ -35,6 +32,13 @@ export const ptBrProjects: iProject[] = [
       'Uma plataforma de gestão de hotéis, inclui scraping para calcular números médios entre hotéis',
     imageUrl: expediaBanner,
     tags: ['Nest.js', 'PostgreSql', 'Jwt', 'TypeORM', 'Swagger', 'Zod'],
+  },
+  {
+    title: 'Bleve Landing Page',
+    description:
+      'Uma landing page completa para a empresa Bleve, com foco em conversão, performance e acessibilidade',
+    imageUrl: bleveBanner,
+    tags: ['React', 'TypeScript', 'TailwindCSS', 'Framer Motion', 'Vite', 'React Hook Form', 'Tanstack Router'],
   },
 ];
 

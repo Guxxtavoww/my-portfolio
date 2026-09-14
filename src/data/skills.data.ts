@@ -30,4 +30,5 @@ export const skillsData = [
   'Tauri JS',
   'Expo CLI',
   'Bash',
+  'Go Lang',
 ].sort();

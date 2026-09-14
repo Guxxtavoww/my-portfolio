@@ -1,4 +1,6 @@
 import wmsBanner from './jpegs/wms-banner.jpeg';
+import bleveBanner from './pngs/bleve.png';
 import expediaBanner from './pngs/expedia.png';
 
-export { wmsBanner, expediaBanner };
+export { bleveBanner, expediaBanner, wmsBanner };
+
