@@ -111,9 +111,9 @@ export default function Intro() {
           href={
             currentTranslation
               ? currentTranslation.lang === 'pt-br'
-                ? '/GustavoAugusto-CV-PT-BR.pdf'
-                : '/GustavoAugusto-CV-Eng.pdf'
-              : '/GustavoAugusto-CV-PT-BR.pdf'
+                ? '/Gustavo_Augusto_Curriculo.pdf'
+                : '/Gustavo_Augusto_Resume.pdf'
+              : '/Gustavo_Augusto_Curriculo'
           }
           download
         >
